@@ -1,3 +1,4 @@
 streamlit
 smpplib
 pandas
+PySocks
