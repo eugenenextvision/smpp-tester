@@ -12,7 +12,10 @@ SMPP_PORT = 13875
 SYSTEM_ID = "Autotest"
 PASSWORD = "vmrmwucu"
 
-DB_FILE = os.path.expanduser("~/Desktop/sms_queue.db")
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_FILE = os.path.join(BASE_DIR, 'sms_queue.db')
 
 def process_queue(client):
     if not os.path.exists(DB_FILE):
