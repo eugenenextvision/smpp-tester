@@ -8,7 +8,7 @@ import smpplib.gsm
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 
 SMPP_HOST = "5.43.226.176"
-SMPP_PORT = 2775
+SMPP_PORT = 13875
 SYSTEM_ID = "Autotest"
 PASSWORD = "vmrmwucu"
 
