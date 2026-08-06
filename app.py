@@ -2,6 +2,13 @@ import streamlit as st
 import sqlite3
 import os
 from datetime import datetime, timedelta
+import urllib.request
+
+try:
+    my_ip = urllib.request.urlopen('https://api.ipify.org').read().decode('utf8')
+    st.info(f"🌐 **Исходящий IP сервера Render:** `{my_ip}`")
+except Exception as e:
+    print(f"Could not fetch outbound IP: {e}")
 
 st.set_page_config(page_title="NOC Quick SMS Tester (SMPP)", page_icon="⚡", layout="centered")
 
