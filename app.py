@@ -8,7 +8,10 @@ st.set_page_config(page_title="NOC Quick SMS Tester (SMPP)", page_icon="⚡", la
 st.title("⚡ NOC Quick SMS Tester (SMPP)")
 st.caption("Отправка автотестов через локальную БД SQLite")
 
-DB_FILE = os.path.expanduser("~/Desktop/sms_queue.db")
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_FILE = os.path.join(BASE_DIR, 'sms_queue.db')
 
 def init_db():
     conn = sqlite3.connect(DB_FILE)
